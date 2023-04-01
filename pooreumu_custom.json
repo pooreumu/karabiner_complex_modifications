@@ -228,7 +228,29 @@
           "type": "basic"
         },
         {
-          "description": "CAPS LOCK + s to left_shift",
+          "description": "CAPS LOCK + a to left_shift",
+          "conditions": [
+            {
+              "name": "caps_lock pressed",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "a",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_shift"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "description": "CAPS LOCK + s to left_option",
           "conditions": [
             {
               "name": "caps_lock pressed",
@@ -244,13 +266,13 @@
           },
           "to": [
             {
-              "key_code": "left_shift"
+              "key_code": "left_option"
             }
           ],
           "type": "basic"
         },
         {
-          "description": "CAPS LOCK + d to left_option",
+          "description": "CAPS LOCK + d to left_command",
           "conditions": [
             {
               "name": "caps_lock pressed",
@@ -260,28 +282,6 @@
           ],
           "from": {
             "key_code": "d",
-            "modifiers": {
-              "optional": ["any"]
-            }
-          },
-          "to": [
-            {
-              "key_code": "left_option"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "description": "CAPS LOCK + f to left_command",
-          "conditions": [
-            {
-              "name": "caps_lock pressed",
-              "type": "variable_if",
-              "value": 1
-            }
-          ],
-          "from": {
-            "key_code": "f",
             "modifiers": {
               "optional": ["any"]
             }
