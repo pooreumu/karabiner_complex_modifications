@@ -93,7 +93,7 @@
           "type": "basic"
         },
         {
-          "description": "CAPS LOCK + space to spotlight (control + space)",
+          "description": "CAPS LOCK + p to delete_or_backspace",
           "conditions": [
             {
               "name": "caps_lock pressed",
@@ -102,21 +102,20 @@
             }
           ],
           "from": {
-            "key_code": "spacebar",
+            "key_code": "p",
             "modifiers": {
               "optional": ["any"]
             }
           },
           "to": [
             {
-              "key_code": "spacebar",
-              "modifiers": ["left_control"]
+              "key_code": "delete_or_backspace"
             }
           ],
           "type": "basic"
         },
         {
-          "description": "CAPS LOCK + o to delete_or_backspace",
+          "description": "CAPS LOCK + o to end",
           "conditions": [
             {
               "name": "caps_lock pressed",
@@ -132,13 +131,35 @@
           },
           "to": [
             {
-              "key_code": "delete_or_backspace"
+              "key_code": "end"
             }
           ],
           "type": "basic"
         },
         {
-          "description": "CAPS LOCK + u to delete_forward",
+          "description": "CAPS LOCK + y to delete_forward",
+          "conditions": [
+            {
+              "name": "caps_lock pressed",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "y",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_forward"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "description": "CAPS LOCK + u to home",
           "conditions": [
             {
               "name": "caps_lock pressed",
@@ -154,7 +175,7 @@
           },
           "to": [
             {
-              "key_code": "delete_forward"
+              "key_code": "home"
             }
           ],
           "type": "basic"
