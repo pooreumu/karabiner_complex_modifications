@@ -203,7 +203,7 @@
           "type": "basic"
         },
         {
-          "description": "CAPS LOCK + open_bracket([) to (",
+          "description": "CAPS LOCK + m to (",
           "conditions": [
             {
               "name": "caps_lock pressed",
@@ -212,8 +212,9 @@
             }
           ],
           "from": {
-            "key_code": "open_bracket",
+            "key_code": "m",
             "modifiers": {
+              "mandatory": ["left_shift"],
               "optional": ["any"]
             }
           },
@@ -226,7 +227,7 @@
           "type": "basic"
         },
         {
-          "description": "CAPS LOCK + close_bracket(]) to )",
+          "description": "CAPS LOCK + ',' to 0",
           "conditions": [
             {
               "name": "caps_lock pressed",
@@ -235,8 +236,33 @@
             }
           ],
           "from": {
-            "key_code": "close_bracket",
+            "key_code": "comma",
             "modifiers": {
+              "mandatory": ["left_shift"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "0",
+              "modifiers": ["left_shift"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "description": "CAPS LOCK + '<' to )",
+          "conditions": [
+            {
+              "name": "caps_lock pressed",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "comma",
+            "modifiers": {
+              "mandatory": ["left_shift"],
               "optional": ["any"]
             }
           },
