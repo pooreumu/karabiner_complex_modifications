@@ -181,7 +181,7 @@
           "type": "basic"
         },
         {
-          "description": "CAPS LOCK + period(.) to equal_sign(=)",
+          "description": "CAPS LOCK + h to enter",
           "conditions": [
             {
               "name": "caps_lock pressed",
@@ -190,20 +190,64 @@
             }
           ],
           "from": {
-            "key_code": "period",
+            "key_code": "h",
             "modifiers": {
               "optional": ["any"]
             }
           },
           "to": [
             {
-              "key_code": "equal_sign"
+              "key_code": "return_or_enter"
             }
           ],
           "type": "basic"
         },
         {
-          "description": "CAPS LOCK + m to (",
+          "description": "CAPS LOCK + ; to [",
+          "conditions": [
+            {
+              "name": "caps_lock pressed",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "semicolon",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "open_bracket"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "description": "CAPS LOCK + ' to ]",
+          "conditions": [
+            {
+              "name": "caps_lock pressed",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "quote",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "close_bracket"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "description": "CAPS LOCK + m to 9",
           "conditions": [
             {
               "name": "caps_lock pressed",
@@ -214,14 +258,12 @@
           "from": {
             "key_code": "m",
             "modifiers": {
-              "mandatory": ["left_shift"],
               "optional": ["any"]
             }
           },
           "to": [
             {
-              "key_code": "9",
-              "modifiers": ["left_shift"]
+              "key_code": "9"
             }
           ],
           "type": "basic"
@@ -238,20 +280,18 @@
           "from": {
             "key_code": "comma",
             "modifiers": {
-              "mandatory": ["left_shift"],
               "optional": ["any"]
             }
           },
           "to": [
             {
-              "key_code": "0",
-              "modifiers": ["left_shift"]
+              "key_code": "0"
             }
           ],
           "type": "basic"
         },
         {
-          "description": "CAPS LOCK + '<' to )",
+          "description": "CAPS LOCK + '.' to -",
           "conditions": [
             {
               "name": "caps_lock pressed",
@@ -260,16 +300,36 @@
             }
           ],
           "from": {
-            "key_code": "comma",
+            "key_code": "period",
             "modifiers": {
-              "mandatory": ["left_shift"],
               "optional": ["any"]
             }
           },
           "to": [
             {
-              "key_code": "0",
-              "modifiers": ["left_shift"]
+              "key_code": "hyphen"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "description": "CAPS LOCK + '/' to =",
+          "conditions": [
+            {
+              "name": "caps_lock pressed",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "slash",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "equal_sign"
             }
           ],
           "type": "basic"
