@@ -401,6 +401,28 @@
           "type": "basic"
         },
         {
+          "description": "CAPS LOCK + q to escape",
+          "conditions": [
+            {
+              "name": "caps_lock pressed",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "q",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "escape"
+            }
+          ],
+          "type": "basic"
+        },
+        {
           "from": {
             "key_code": "caps_lock",
             "modifiers": {
